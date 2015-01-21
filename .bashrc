@@ -2,6 +2,7 @@
 norm="$(printf '\033[0m')" #returns to "normal"
 bold="$(printf '\033[1m')" #set bold
 red="$(printf '\033[31m')" #set red
+cyan="$(printf '\033[36m')" #set cyan
 boldred="$(printf '\033[1;31m')" #set bold, and set red.
 
 #Keep Everythiing!
@@ -27,10 +28,10 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 #Make cd display pwd
-function cd { builtin cd "$@" && printf "%s" "$red" ;  pwd ; printf "%s" "$norm"; }
+function cd { builtin cd "$@" && printf "%s" "$cyan" ;  pwd ; printf "%s" "$norm"; }
 
 #Make cd display pwd and ls -al
-function cdd { builtin cd "$@" &&  printf "%s" "$red" ; pwd ; printf "%s" "$norm" && ls -al; }
+function cdd { builtin cd "$@" &&  printf "%s" "$cyan" ; pwd ; printf "%s" "$norm" && ls -al; }
 
 # User specific aliases and functions
 
